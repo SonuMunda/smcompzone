@@ -1,0 +1,48 @@
+.header {
+  height: 64px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 0px 10px #D4BFF9;
+}
+
+.brand .brand-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navlist {
+  display: flex;
+  list-style: none;
+}
+
+.navlist .list-item {
+  margin: 5px;
+}
+
+.navlist .list-item .nav-link {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.user-area .user-name {
+  margin: 4px;
+}
+
+.user-area .header-btns .header-btn {
+  margin: 10px;
+  padding: 10px;
+  color: var(--light);
+  text-transform: uppercase;
+  background-color: var(--primary);
+}
+
+.user-area .cart {
+  font-size: 1.4rem;
+  margin: 4px;
+  padding: 4px;
+}

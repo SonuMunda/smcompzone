@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary:#6002ee;
+  --primarylight:#7e3ff2;
+  --primarydark:#3700b3;
+  --dark:#212121;
+  --darkmd:#616161;
+  --darklite:#9E9E9E;
+  --light:#ffffff;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Globale styles */
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.around{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
