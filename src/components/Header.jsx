@@ -12,18 +12,18 @@ const Header = () => {
           <nav className="navbar">
             <ul className="navlist">
               <li className="list-item">
-                <NavLink className="nav-link">Home</NavLink>
+                <NavLink to= "/" className="nav-link">Home</NavLink>
               </li>
               <li className="list-item">
-                <NavLink className="nav-link">About</NavLink>
+                <NavLink to= "/about" className="nav-link">About</NavLink>
               </li>
               <li className="list-item">
-                <NavLink className="nav-link" Products>
+                <NavLink to= "products/" className="nav-link" Products>
                   Products
                 </NavLink>
               </li>
               <li className="list-item">
-                <NavLink className="nav-link">Contact</NavLink>
+                <NavLink to= "/contact" className="nav-link">Contact</NavLink>
               </li>
             </ul>
           </nav>
