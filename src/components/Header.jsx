@@ -1,44 +1,100 @@
 import "./css/Header.css";
+import logo from "/images/brand_logo.png";
 import { NavLink } from "react-router-dom";
 import { HiOutlineShoppingCart } from "react-icons/hi";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 const Header = () => {
+  const [navActive, setNavActive] = useState(false);
+  const toggleNav = () => {
+    if (navActive === true) {
+      setNavActive(false);
+    } else {
+      setNavActive(true);
+    }
+  };
   return (
     <header className="header center">
-      <div className="container between">
+      <div className="container between mx-4">
         <div className="brand">
-          <h1 className="brand-title">SMCompZone</h1>
+          <NavLink to="/">
+            <img src={logo} alt="SMCompZone" />
+          </NavLink>
         </div>
-        <div className="center">
-          <nav className="navbar">
-            <ul className="navlist">
+        <nav className={`navbar ${navActive ? "nav-active" : ""}`}>
+          <div className="nav-container center">
+            <div
+              className="closebar"
+              onClick={() => {
+                setNavActive(false);
+              }}
+            >
+              <FaTimes />
+            </div>
+            <ul className="navlist center">
               <li className="list-item">
-                <NavLink to= "/" className="nav-link">Home</NavLink>
+                <NavLink
+                  to="/"
+                  className="nav-link"
+                  onClick={() => {
+                    setNavActive(false);
+                  }}
+                >
+                  Home
+                </NavLink>
               </li>
               <li className="list-item">
-                <NavLink to= "/about" className="nav-link">About</NavLink>
+                <NavLink
+                  to="/about"
+                  className="nav-link"
+                  onClick={() => {
+                    setNavActive(false);
+                  }}
+                >
+                  About
+                </NavLink>
               </li>
               <li className="list-item">
-                <NavLink to= "products/" className="nav-link" Products>
+                <NavLink
+                  to="products/"
+                  className="nav-link"
+                  onClick={() => {
+                    setNavActive(false);
+                  }}
+                >
                   Products
                 </NavLink>
               </li>
               <li className="list-item">
-                <NavLink to= "/contact" className="nav-link">Contact</NavLink>
+                <NavLink
+                  to="/contact"
+                  className="nav-link"
+                  onClick={() => {
+                    setNavActive(false);
+                  }}
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
-          </nav>
-          <div className="user-area center ms-5">
-            <div className="user-name">
-              <span className="text-sm text-gray-600">Welcome, Sonu Munda</span>
-            </div>
-            <div className="header-btns">
-              <button className="header-btn">Log out</button>
-            </div>
-            <div className="cart">
-              <HiOutlineShoppingCart />
+            <div className="user-area center ms-5">
+              <div className="user-name">
+                <span className="text-sm text-gray-600">
+                  Welcome, Sonu Munda
+                </span>
+              </div>
+              <div className="header-btns">
+                <button className="header-btn">Log out</button>
+              </div>
+              <div className="cart">
+                <HiOutlineShoppingCart />
+              </div>
             </div>
           </div>
-        </div>
+        </nav>
+      </div>
+      <div className="menubar" onClick={toggleNav}>
+        <FaBars />
       </div>
     </header>
   );

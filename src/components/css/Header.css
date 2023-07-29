@@ -4,13 +4,32 @@
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 30px;
   background-color: white;
-  box-shadow: 0px 0px 10px #D4BFF9;
+  box-shadow: 0px 0px 10px #d4bff9;
 }
 
-.brand .brand-title {
+.menubar {
   font-size: 1.4rem;
-  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.brand img {
+  height: 48px;
+}
+.nav-container {
+  height: 100%;
+  width: 100%;
+}
+.closebar {
+  font-size: 1.8rem;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  display: none;
 }
 
 .navlist {
@@ -39,10 +58,60 @@
   color: var(--light);
   text-transform: uppercase;
   background-color: var(--primary);
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .user-area .cart {
   font-size: 1.4rem;
   margin: 4px;
   padding: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  .menubar {
+    display: block;
+  }
+
+  .closebar {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: block;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    background: var(--light);
+    box-shadow: 0px 2px 6px 0px #d4bff9;
+  }
+
+  .nav-active {
+    display: block;
+  }
+  .nav-container,
+  .navlist,
+  .user-area {
+    flex-direction: column;
+  }
+
+  .navlist .list-item .nav-link{
+    font-size: 1.2rem;
+  }
+  .user-name span{
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .brand img {
+    height: 32px;
+  }
 }

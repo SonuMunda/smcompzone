@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="wrapper">
+    <>
       <Router>
         <Header />
         <Routes>
@@ -22,7 +22,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </div>
+    </>
   );
 }
 
