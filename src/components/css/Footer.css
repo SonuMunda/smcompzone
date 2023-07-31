@@ -1,6 +1,6 @@
-.footer{
-    background-color:#1A0040;
-    color: var(--light);
+.footer {
+  background-color: #1a0040;
+  color: var(--light);
 }
 .footer-col {
   margin: 0.5rem;
@@ -8,10 +8,10 @@
   margin: 1rem;
 }
 
-.footer-heading h4{
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
+.footer-heading h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .media-links {
