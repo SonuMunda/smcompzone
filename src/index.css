@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --primary:#6002ee;
-  --primarylight:#7e3ff2;
-  --primarydark:#3700b3;
-  --dark:#212121;
-  --darkmd:#616161;
-  --darklite:#9E9E9E;
-  --light:#ffffff;
+:root {
+  --primary: #6002ee;
+  --primarylight: #7e3ff2;
+  --primarydark: #3700b3;
+  --primaryextralite: #f6efff;
+  --dark: #212121;
+  --darkmd: #616161;
+  --darklite: #9e9e9e;
+  --light: #ffffff;
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 /* Globale styles */
-.center{
+.text-gray {
+  color: var(--darkmd);
+}
+
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.around{
+.around {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.between{
+.between {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.btn {
+  padding: 10px;
+  color: var(--light);
+  text-transform: uppercase;
+  background-color: var(--primary);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: var(--primarydark);
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Balthazar", serif;
 }

@@ -1,0 +1,16 @@
+.partners {
+  background-color: var(--primaryextralite);
+}
+.partners-row{
+    flex-wrap: wrap;
+}
+
+.partners-col{
+    margin: 1rem;
+}
+
+.partners-col img {
+  display: block;
+  margin: auto;
+  width: 100px;
+}

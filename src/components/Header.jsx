@@ -83,8 +83,8 @@ const Header = () => {
                   Welcome, Sonu Munda
                 </span>
               </div>
-              <div className="header-btns">
-                <button className="header-btn">Log out</button>
+              <div className="header-btns m-1">
+                <button className="btn header-btn">Log out</button>
               </div>
               <div className="cart">
                 <HiOutlineShoppingCart />

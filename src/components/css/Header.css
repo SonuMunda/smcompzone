@@ -6,7 +6,6 @@
   left: 0;
   padding: 0 30px;
   background-color: white;
-  box-shadow: 0px 0px 10px #d4bff9;
 }
 
 .menubar {
@@ -18,7 +17,7 @@
 }
 
 .brand img {
-  height: 48px;
+  height: 32px;
 }
 .nav-container {
   height: 100%;
@@ -47,19 +46,11 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-
+.navlist .list-item .nav-link:hover {
+  color: var(--primarydark);
+}
 .user-area .user-name {
   margin: 4px;
-}
-
-.user-area .header-btns .header-btn {
-  margin: 10px;
-  padding: 10px;
-  color: var(--light);
-  text-transform: uppercase;
-  background-color: var(--primary);
-  font-size: 14px;
-  font-weight: bold;
 }
 
 .user-area .cart {
@@ -68,15 +59,19 @@
   padding: 4px;
 }
 
-@media screen and (max-width: 1200px) {
+.user-area .cart:hover {
+  color: var(--primarydark);
+}
+
+@media screen and (max-width: 960px) {
   .menubar {
     display: block;
   }
 
   .closebar {
     position: absolute;
-    top: 30px;
-    right: 40px;
+    top: 10px;
+    right: 10px;
     display: block;
   }
   .navbar {
@@ -90,7 +85,6 @@
     overflow: hidden;
     transition: all 0.4s ease-in-out;
     background: var(--light);
-    box-shadow: 0px 2px 6px 0px #d4bff9;
   }
 
   .nav-active {
@@ -102,16 +96,10 @@
     flex-direction: column;
   }
 
-  .navlist .list-item .nav-link{
+  .navlist .list-item .nav-link {
     font-size: 1.2rem;
   }
-  .user-name span{
+  .user-name span {
     font-size: 1rem !important;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .brand img {
-    height: 32px;
   }
 }

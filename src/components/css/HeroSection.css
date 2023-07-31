@@ -1,0 +1,28 @@
+.hero-section {
+  min-height: 65vh;
+  padding: 64px 0;
+  width: 100%;
+  background-color: #f6efff;
+}
+
+.hero-section-left,
+.hero-section-right {
+  height: 100%;
+  width: 50%;
+  margin: 2rem;
+}
+
+.hero-section-right img {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section .container {
+    flex-direction: column;
+  }
+
+  .hero-section-left,
+  .hero-section-right {
+    width: 80%;
+  }
+}
