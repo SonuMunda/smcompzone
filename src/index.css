@@ -15,7 +15,8 @@
   --primaryextralite: #f6efff;
   --dark: #212121;
   --darkmd: #616161;
-  --darklite: #9e9e9e;
+  --darklite: rgb(219, 219, 219);
+  --graytint:#F5F5F5;
   --light: #ffffff;
 }
 
@@ -26,6 +27,10 @@ body {
 /* Globale styles */
 .text-gray {
   color: var(--darkmd);
+}
+
+.gray-tint{
+  background-color: var(--graytint);
 }
 
 .center {

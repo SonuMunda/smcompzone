@@ -2,7 +2,7 @@
   min-height: 65vh;
   padding: 64px 0;
   width: 100%;
-  background-color: #f6efff;
+  background-color: var(--light);
 }
 
 .hero-section-left,

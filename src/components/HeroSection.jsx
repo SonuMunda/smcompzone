@@ -1,4 +1,5 @@
 import "./css/HeroSection.css";
+import { Link } from "react-router-dom";
 import heroSectionImg from "/images/hero_section_image.jpg";
 const HeroSection = () => {
   return (
@@ -22,11 +23,11 @@ const HeroSection = () => {
             </p>
           </div>
           <div className="hero-section-btn">
-            <button className="btn">Shop Now</button>
+            <Link to={"/products"}><button className="btn">Shop Now</button></Link>
           </div>
         </div>
         <div className="hero-section-right">
-           <img src={heroSectionImg} alt="Hero Section Image" />
+          <img src={heroSectionImg} alt="Hero Section Image" />
         </div>
       </div>
     </section>

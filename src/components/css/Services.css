@@ -8,7 +8,7 @@
   margin: 1rem;
   border-radius: 8px;
   flex-direction: column;
-  background-color: var(--primaryextralite);
+  background-color: var(--graytint);
 }
 
 .services-row .services-col .service-icon {
