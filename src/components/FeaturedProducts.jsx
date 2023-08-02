@@ -1,12 +1,9 @@
 import useProductContext from "../contexts/productcontext";
+import LoadingScreen from "./LoadingScreen";
 import ProductCard from "./ProductCard";
 const FeaturedProducts = () => {
   const { isLoading, featuredProducts } = useProductContext();
-  console.log(featuredProducts);
 
-  if (isLoading) {
-    return <div>....Loading</div>;
-  }
   return (
     <section className="featured-products center gray-tint py-5">
       <div className="container p-5">
@@ -17,9 +14,13 @@ const FeaturedProducts = () => {
           <h3 className="heading">Featured Products</h3>
         </div>
         <div className="featured-prod-cards center flex-wrap py-2">
-          {featuredProducts.map((product) => {
-            return <ProductCard key={product.id} {...product}></ProductCard>;
-          })}
+          {isLoading ? (
+            <LoadingScreen />
+          ) : (
+            featuredProducts.map((product) => {
+              return <ProductCard key={product.id} {...product} />;
+            })
+          )}
         </div>
       </div>
     </section>

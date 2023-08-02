@@ -1,0 +1,20 @@
+.mission-details,
+.mission-image {
+  width: 40%;
+  position: relative;
+}
+
+.mission-image img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .our-mission .container {
+    flex-direction: column;
+  }
+  .mission-details,
+  .mission-image {
+    width: 95%;
+    margin: 1rem 0;
+  }
+}

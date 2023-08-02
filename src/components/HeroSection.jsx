@@ -1,7 +1,8 @@
 import "./css/HeroSection.css";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import heroSectionImg from "/images/hero_section_image.jpg";
-const HeroSection = () => {
+const HeroSection = ({ heading, text }) => {
   return (
     <section className="hero-section center">
       <div className="container center">
@@ -10,20 +11,15 @@ const HeroSection = () => {
             <h4 className="text-gray font-bold uppercase">Welcome to</h4>
           </div>
           <div className="hero-section-heading">
-            <h1 className="heading"> SMCompZone </h1>
+            <h1 className="heading"> {heading} </h1>
           </div>
           <div className="hero-section-text">
-            <p className="text-gray py-3">
-              Welcome to SmCompZone, your ultimate destination for top-quality
-              computer laptops and hardware. Explore our extensive collection of
-              cutting-edge laptops, powerful desktops, and high-performance
-              hardware components. Whether you&apos;re a professional, a gamer,
-              or a tech enthusiast, we&apos;ve got you covered with the latest
-              models from leading brands.
-            </p>
+            <p className="text-gray py-3">{text}</p>
           </div>
           <div className="hero-section-btn">
-            <Link to={"/products"}><button className="btn">Shop Now</button></Link>
+            <Link to={"/products"}>
+              <button className="btn">Shop Now</button>
+            </Link>
           </div>
         </div>
         <div className="hero-section-right">
@@ -34,4 +30,8 @@ const HeroSection = () => {
   );
 };
 
+HeroSection.propTypes = {
+  heading: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 export default HeroSection;
