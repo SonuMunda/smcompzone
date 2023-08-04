@@ -13,6 +13,10 @@
   width: 80%;
 }
 
+.price .price-heading{
+    color: var(--primary);
+}
+
 @media screen and (max-width: 774px) {
   #single-product-card {
     flex-direction: column;
