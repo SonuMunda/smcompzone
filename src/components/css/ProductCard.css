@@ -27,7 +27,7 @@
   right: 0px;
   font-size: 12px;
   text-transform: uppercase;
-  background-color: var(--graytint);
+  background-color: var(--darklite);
   padding: 0.2rem 0.5rem;
   border-radius: 8px;
 }

@@ -1,0 +1,30 @@
+#single-product-card{
+    padding: 6rem 1rem;
+}
+
+#single-product-card .product-image,
+#single-product-card .product-details {
+  width: 40%;
+}
+
+#single-product-card .product-image img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+@media screen and (max-width: 774px) {
+  #single-product-card {
+    flex-direction: column;
+  }
+
+  #single-product-card .product-image,
+  #single-product-card .product-details {
+    width: 95%;
+  }
+
+  #single-product-card .product-image img {
+    width: 75%;
+  }
+  
+}

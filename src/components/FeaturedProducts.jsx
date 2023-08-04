@@ -1,9 +1,8 @@
-import useProductContext from "../contexts/productcontext";
+import useProductContext from "../contexts/ProductContext";
 import LoadingScreen from "./LoadingScreen";
 import ProductCard from "./ProductCard";
 const FeaturedProducts = () => {
   const { isLoading, featuredProducts } = useProductContext();
-
   return (
     <section className="featured-products center gray-tint py-5">
       <div className="container p-5">
