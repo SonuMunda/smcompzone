@@ -5,6 +5,7 @@ import useProductContext from "../contexts/ProductContext";
 import FormatPrice from "../helpers/FormatPrice";
 import "./css/SingleProduct.css";
 import PageNavigation from "../components/PageNavigation";
+import { FaStar } from "react-icons/fa";
 
 const API = "https://smcompzone-api.onrender.com/products";
 
@@ -12,6 +13,7 @@ const SingleProduct = () => {
   const { id } = useParams();
   const { getSingleProduct, isSingleLoading, singleProduct } =
     useProductContext();
+  console.log(singleProduct);
   useEffect(() => {
     window.scroll(0, 0);
     getSingleProduct(`${API}?id=${id}`);
@@ -24,7 +26,7 @@ const SingleProduct = () => {
       ) : (
         <>
           <PageNavigation title={singleProduct.name} />
-          <section className="single-product">
+          <section className="single-product center">
             <div className="container">
               <div id="single-product-card" className="center">
                 <div className="product-image">
@@ -37,6 +39,17 @@ const SingleProduct = () => {
                   <div className="product-desc">
                     <p className="description my-1">
                       {singleProduct.description}
+                    </p>
+                  </div>
+                  <div className="rating-reviews flex items-center my-2">
+                    <h4 className="ratings center bg-violet-800 text-white px-1 rounded">
+                      {singleProduct.ratings}
+                      <span className="text-sm mx-1">
+                        <FaStar />
+                      </span>
+                    </h4>
+                    <p className="mx-2">
+                      ({singleProduct.reviews}) customer reviews
                     </p>
                   </div>
                   <div className="price">
@@ -74,15 +87,22 @@ const SingleProduct = () => {
                     }}
                   >
                     <div className="product-id">
-                      <h6 className="font-bold">Available: In stock</h6>
                       <h6 className="font-bold">
-                        Product ID: {singleProduct.id}
+                        
+                        <span className="text-gray mr-2">Available:</span>
+                        {singleProduct.stock == true
+                          ? "In Stock"
+                          : "Out of Stock"}
                       </h6>
                       <h6 className="font-bold">
-                        Product Category: {singleProduct.category}
+                        <span className="text-gray mr-2">Product ID:</span>
+                        {singleProduct.id}
                       </h6>
                       <h6 className="font-bold">
-                        Product Brand: {singleProduct.brand}
+                       <span className="text-gray mr-2">Product Category:</span> {singleProduct.category}
+                      </h6>
+                      <h6 className="font-bold">
+                      <span className="text-gray mr-2">Product Brand:</span>{singleProduct.brand}
                       </h6>
                     </div>
                   </div>

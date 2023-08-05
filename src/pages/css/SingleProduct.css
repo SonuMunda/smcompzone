@@ -1,10 +1,17 @@
-#single-product-card{
-    padding: 6rem 1rem;
+.single-product{
+  width: 100%;
 }
 
-#single-product-card .product-image,
-#single-product-card .product-details {
+#single-product-card{
+    padding: 1rem;
+}
+
+#single-product-card .product-image {
   width: 40%;
+}
+
+#single-product-card .product-details {
+  width: 50%;
 }
 
 #single-product-card .product-image img {
@@ -24,11 +31,11 @@
 
   #single-product-card .product-image,
   #single-product-card .product-details {
-    width: 95%;
+    width: 94%;
   }
 
   #single-product-card .product-image img {
-    width: 75%;
+    width: 50%;
   }
   
 }
