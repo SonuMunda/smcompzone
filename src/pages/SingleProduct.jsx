@@ -6,6 +6,7 @@ import FormatPrice from "../helpers/FormatPrice";
 import "./css/SingleProduct.css";
 import PageNavigation from "../components/PageNavigation";
 import { FaStar } from "react-icons/fa";
+import AddToCart from "../components/AddToCart";
 
 const API = "https://smcompzone-api.onrender.com/products";
 
@@ -83,12 +84,10 @@ const SingleProduct = () => {
                     className="other-details py-2 my-4"
                     style={{
                       borderBottom: "2px solid black",
-                      borderTop: "2px solid black",
                     }}
                   >
                     <div className="product-id">
                       <h6 className="font-bold">
-                        
                         <span className="text-gray mr-2">Available:</span>
                         {singleProduct.stock == true
                           ? "In Stock"
@@ -99,21 +98,22 @@ const SingleProduct = () => {
                         {singleProduct.id}
                       </h6>
                       <h6 className="font-bold">
-                       <span className="text-gray mr-2">Product Category:</span> {singleProduct.category}
+                        <span className="text-gray mr-2">
+                          Product Category:
+                        </span>
+                        {singleProduct.category}
                       </h6>
                       <h6 className="font-bold">
-                      <span className="text-gray mr-2">Product Brand:</span>{singleProduct.brand}
+                        <span className="text-gray mr-2">Product Brand:</span>
+                        {singleProduct.brand}
                       </h6>
                     </div>
                   </div>
-                  <div className="product-color">
-                    <div className="color">
-                      <span className="font-bold">Color:</span> Black
-                    </div>
-                  </div>
-                  <div className="product-button">
-                    <button className="btn">Add to Cart</button>
-                  </div>
+                  {singleProduct.stock === true ? (
+                    <AddToCart product={singleProduct}/>
+                  ) : (
+                    <p color="text-xl font-bold text-gray">Currently Out of Stock</p>
+                  )}
                 </div>
               </div>
             </div>
