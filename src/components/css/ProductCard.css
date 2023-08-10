@@ -4,15 +4,14 @@
   flex-direction: column;
   justify-content: center;
   width: 300px;
-  border-radius: 8px;
   overflow: hidden;
   background: var(--light);
-  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
 }
 
 .product-card:hover{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .product-card .product-image {
@@ -33,7 +32,7 @@
 }
 
 .product-card .product-image img {
-  max-height: 100%;
+  max-height:  200px;
   max-width: 100%;
   display: block;
   margin: auto;
@@ -42,6 +41,10 @@
 }
 
 .product-card .card-datails {
+  display: flex;
+  align-items: center;
+  height: 4rem;
   width: 100%;
+  font-size: 14px;
  border-top: 1px solid var(--darklite);
 }
