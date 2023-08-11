@@ -10,7 +10,6 @@ const FilterSection = () => {
         <div className="category-heading">
           <h6 className="font-bold">Category</h6>
         </div>
-       
       </div>
     </>
   );

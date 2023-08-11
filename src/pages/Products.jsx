@@ -7,12 +7,12 @@ const Products = () => {
   return (
     <div className="wrapper">
       <section className="all-products center">
-        <div className="container p-4">
-          <div className="filter">
+        <div className="container center">
+          <div className="filter-menu">
             <FilterSection />
           </div>
-          <section className="sorting-products-view">
-            <div className="sort">
+          <section className="sorting-products-view center flex-col">
+            <div className="sort-menu">
               <SortingSection />
             </div>
             <div className="products">
