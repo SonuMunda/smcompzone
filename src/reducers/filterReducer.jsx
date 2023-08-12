@@ -11,7 +11,7 @@ const filterReducer = (state, action) => {
         ...state,
         filter_products: [...action.payload],
         all_products: [...action.payload],
-        isProductsLoading:false,
+        isProductsLoading: false,
       };
 
     case "SET_GRID_VIEW":
@@ -25,6 +25,40 @@ const filterReducer = (state, action) => {
         ...state,
         grid_view: false,
       };
+
+    case "GET_SORT_PRODUCTS": {
+      return {
+        ...state,
+        sorting_value: action.payload,
+      };
+    }
+
+    case "SORTING_PRODUCTS": {
+      let newSortData;
+      const { filter_products } = state;
+      let tempSortProduct = [...filter_products];
+      tempSortProduct.sort((a, b) => {
+        if (state.sorting_value === "price-ascending") {
+          return a.price - b.price;
+        }
+        if (state.sorting_value === "price-descending") {
+          return b.price - a.price;
+        }
+        if (state.sorting_value === "product-ascending") {
+          return a.name.localeCompare(b.name);
+        }
+        if (state.sorting_value === "product-descending") {
+          return b.name.localeCompare(a.name);
+        }
+        return 0; 
+      });
+      newSortData = tempSortProduct;
+      return {
+        ...state,
+        filter_products: newSortData,
+      };
+    }
+
     default:
       return state;
   }

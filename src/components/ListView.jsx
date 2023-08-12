@@ -16,7 +16,7 @@ const ListView = ({ products }) => {
                 <h3 className="text-xl">{product.name}</h3>
               </div>
               <div className="product-price">
-                <FormatPrice price={product.price} />
+               <p className="text-gray">MRP: <FormatPrice price={product.price} /> </p>
               </div>
               <div className="product-details">
                 <p>{product.description}</p>

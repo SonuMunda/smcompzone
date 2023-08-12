@@ -7,6 +7,15 @@
   width: 320px;
 }
 
+#sort-by-list {
+  height: 32px;
+  outline: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 14px;
+  padding: 0 5px;
+}
+
 .sorting-products-view {
   min-width: 554px;
 }
