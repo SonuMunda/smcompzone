@@ -1,20 +1,41 @@
-.all-products{
-    margin-top: 70px;
-    width: 100%;
+.all-products {
+  margin-top: 70px;
+  width: 100%;
 }
 
-.filter{
-    min-width: 320px;
+.filter-menu {
+  width: 320px;
 }
 
-.sorting-product-view{
-    min-width: 554px;
+.sorting-products-view {
+  min-width: 554px;
 }
 
-@media screen and (max-width: 960px) {
-  .filter-menu{
+.sort-menu {
+  padding: 0 1rem;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 65px;
+  background-color: var(--light);
+  z-index: 1;
+}
+
+.sorting-menu-row .sorting-btns .sorting-btn {
+  padding: 0.5rem;
+  margin: 0.5rem 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sorting-btn-active {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+@media screen and (max-width: 1024px) {
+  .filter-menu {
     position: fixed;
-    top: 64px;
+    top: 0px;
     left: -320px;
   }
 }

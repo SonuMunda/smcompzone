@@ -12,10 +12,6 @@ const About = () => {
     <div className="wrapper">
       <HeroSection heading={heading} text={text} />
       <hr />
-      <Services />
-      <hr />
-      <Partners />
-      <hr />
       <section className="our-mission center m-5">
         <div className="container around p-4">
           <div className="mission-image">
@@ -46,6 +42,10 @@ const About = () => {
           </div>
         </div>
       </section>
+      <hr />
+      <Services />
+      <hr />
+      <Partners />
     </div>
   );
 };
