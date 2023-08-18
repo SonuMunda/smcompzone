@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 
 const GridView = ({ products }) => {
   return (
-    <div className="grid-view-cards center  flex-wrap">
+    <div className="grid-view-cards center flex-wrap">
       {products.map((product) => {
         return <ProductCard key={product.id} {...product} />;
       })}

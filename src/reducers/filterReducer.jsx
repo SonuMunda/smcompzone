@@ -82,13 +82,13 @@ const filterReducer = (state, action) => {
         });
       }
 
-      if (category != "all") {
+      if (category !== "all") {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.category === category;
         });
       }
 
-      if (brand != "all") {
+      if (brand !== "all") {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.brand === brand;
         });

@@ -58,7 +58,7 @@ const FilterSection = () => {
         </div>
         <div className="brand-filters">
           <form>
-            <select id="brand-selector" name="brand"  onChange={updateFilterValue}>
+            <select className="uppercase" id="brand-selector" name="brand"  onChange={updateFilterValue}>
               {brands.map((curElem, index) => {
                 return (
                   <option

@@ -14,7 +14,7 @@ const Products = () => {
           <div className="filter-menu">
             <FilterSection />
           </div>
-          <section className="sorting-products-view flex flex-col items-center border">
+          <section className="sorting-products-view flex flex-col border">
             <div className="sort-menu">
               <SortingSection />
             </div>

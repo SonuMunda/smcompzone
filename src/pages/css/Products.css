@@ -54,6 +54,7 @@
   color: var(--light);
 }
 
+
 @media screen and (max-width: 1024px) {
   .all-products .container {
     flex-direction: column;
