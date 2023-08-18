@@ -12,6 +12,8 @@ const initialState = {
   sorting_value: "price-ascending",
   filters: {
     searchText: "",
+    category: "all",
+    brand: "all",
   },
 };
 
@@ -43,7 +45,6 @@ export const FilterContextProvider = ({ children }) => {
   const updateFilterValue = (event) => {
     let name = event.target.name;
     let value = event.target.value;
-
     return dispatch({ type: "UPDATE_FILTER_VALUE", payload: { name, value } });
   };
 
@@ -54,7 +55,6 @@ export const FilterContextProvider = ({ children }) => {
 
   useEffect(() => {
     getFilterdProducts(products);
-    console.log(products);
   }, [products]);
   return (
     <FilterContext.Provider

@@ -15,6 +15,16 @@
   border: 1px solid var(--dark);
   border-radius: 4px;
 }
+.categories .category-btn {
+  text-align: left;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.category-btn-active {
+  border-bottom: 2px solid var(--primary);
+}
+
 #sort-by-list {
   height: 32px;
   outline: none;
@@ -25,7 +35,7 @@
 }
 
 .sorting-products-view {
-  min-width: 554px;
+  width: 1024px;
 }
 
 .sort-menu {
@@ -52,6 +62,6 @@
     width: 100%;
   }
   .sorting-products-view {
-    min-width: 100%;
+    width: fit-content;
   }
 }
