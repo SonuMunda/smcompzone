@@ -9,12 +9,12 @@ const Products = () => {
 
   return (
     <div className="wrapper">
-      <section className="all-products center">
-        <div className="container center">
+      <section className="all-products flex justify-center">
+        <div className="container flex border">
           <div className="filter-menu">
             <FilterSection />
           </div>
-          <section className="sorting-products-view center flex-col">
+          <section className="sorting-products-view flex flex-col items-center border">
             <div className="sort-menu">
               <SortingSection />
             </div>

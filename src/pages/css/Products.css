@@ -4,9 +4,17 @@
 }
 
 .filter-menu {
+  position: relative;
   width: 320px;
+  padding: 10px;
 }
-
+.product-search .search-bar {
+  height: 2rem;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid var(--dark);
+  border-radius: 4px;
+}
 #sort-by-list {
   height: 32px;
   outline: none;
@@ -23,11 +31,6 @@
 .sort-menu {
   padding: 0 1rem;
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 65px;
-  background-color: var(--light);
-  z-index: 1;
 }
 
 .sorting-menu-row .sorting-btns .sorting-btn {
@@ -42,9 +45,13 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .all-products .container {
+    flex-direction: column;
+  }
   .filter-menu {
-    position: fixed;
-    top: 0px;
-    left: -320px;
+    width: 100%;
+  }
+  .sorting-products-view {
+    min-width: 100%;
   }
 }

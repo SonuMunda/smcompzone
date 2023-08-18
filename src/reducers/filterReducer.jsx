@@ -50,7 +50,7 @@ const filterReducer = (state, action) => {
         if (state.sorting_value === "product-descending") {
           return b.name.localeCompare(a.name);
         }
-        return 0; 
+        return 0;
       });
       newSortData = tempSortProduct;
       return {
@@ -59,6 +59,33 @@ const filterReducer = (state, action) => {
       };
     }
 
+    case "UPDATE_FILTER_VALUE": {
+      const { name, value } = action.payload;
+
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          [name]: value,
+        },
+      };
+    }
+
+    case "FILTER_PRODUCTS": {
+      let { all_products } = state;
+      let tempFilterProduct = [...all_products];
+      const { searchText } = state.filters;
+
+      if (searchText) {
+        tempFilterProduct = tempFilterProduct.filter((curElem) => {
+          return curElem.name.includes(searchText); 
+        });
+      }
+      return {
+        ...state,
+        filter_products: tempFilterProduct,
+      };
+    }
     default:
       return state;
   }

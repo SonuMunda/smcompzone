@@ -1,9 +1,23 @@
+import { useFilterContext } from "../contexts/FilterContext";
+
 const FilterSection = () => {
+  const {filters:{searchText},updateFilterValue} = useFilterContext()
   return (
     <>
       <div className="product-search">
-        <form action="">
-          <input type="search" className="search-bar" />
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <input
+            type="search"
+            className="search-bar uppercase"
+            name="searchText"
+            value={searchText}
+            onChange={updateFilterValue}
+            placeholder="Search"
+          />
         </form>
       </div>
       <div className="category-filter">
